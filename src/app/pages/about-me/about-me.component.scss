@@ -1,0 +1,49 @@
+.about-me {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 12rem;
+   
+    .welcoming {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    .details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .welcoming-text {
+            font-size: 1.2rem;
+            font-weight: 300;
+            padding: 0 0 0 3rem;
+            text-align: justify;
+        }
+
+        .welcoming-image {
+            img {
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        padding: 40px 20px;
+
+        .details {
+            grid-template-columns: 1fr;
+
+            .welcoming-text {
+                padding: 20px 0 0;
+            }
+
+            .welcoming-image {
+                img {
+                    height: auto;
+                }
+            }
+        }
+    }
+}

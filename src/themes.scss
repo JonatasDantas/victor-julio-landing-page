@@ -1,0 +1,35 @@
+@import '~@nebular/theme/styles/theming';
+@import '~@nebular/theme/styles/themes/dark';
+
+$nb-themes: nb-register-theme((
+
+  // add your variables here like:
+
+  // color-primary-100: #f2f6ff,
+  // color-primary-200: #d9e4ff,
+  // color-primary-300: #a6c1ff,
+  // color-primary-400: #598bff,
+  // color-primary-500: #3366ff,
+  // color-primary-600: #274bdb,
+  // color-primary-700: #1a34b8,
+  // color-primary-800: #102694,
+  // color-primary-900: #091c7a,
+  font-family-primary: inherit,
+  font-family-secondary: inherit,
+  header-padding: 0rem,
+  header-background-color: #202020,
+  button-filled-warning-background-color: #EFCC82,
+  button-filled-warning-text-color: #FFF,
+  button-filled-warning-border-color: #EFCC82,
+  button-filled-warning-hover-background-color: #EFCC82,
+  button-filled-warning-hover-border-color: #EFCC82,
+  menu-item-divider-color: #bbbbbb,
+  menu-text-color: #fff,
+  menu-item-hover-text-color: #fff,
+  menu-item-icon-color: #EFCC82,
+  menu-item-icon-hover-color: #EFCC82,
+  menu-item-icon-margin: 0 1rem 0 0,
+  icon-warning-color: #EFCC82,
+  card-height-small: 22rem,
+  footer-background-color: #272727,
+), default, default);

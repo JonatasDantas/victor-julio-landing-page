@@ -1,0 +1,35 @@
+<div class="home" #container>
+    <ngb-carousel class="carousel-header" [showNavigationArrows]="false">
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img class="background" src="/assets/img/victor-julio-removebg.png" style="object-fit: contain !important;">
+                <div class="overlay"></div>
+            </div>
+
+            <div class="carousel-caption header-caption">
+                <h1>Oi! Meu nome é Victor Julio</h1>
+                <h2>Sou especializado em ensaios pessoais, festas de 15 anos, aniversário infantil e ensaio famliar</h2>
+            </div>
+
+            <div class="carousel-actions">
+                <button nbButton status="warning" size="large" shape="round" (click)="navigatePortfolio()">Veja meu portfolio</button>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+    <div class="general-info">
+        <div class="welcoming">Estou aqui para capturar os seus momentos</div>
+        <hr class="divider warning"/>
+        <div class="welcoming-text">Procurando por um fotógrafo carismático, divertido, apaixonado e criativo ? Sou eu mesmo!</div>
+        <div class="services">
+            <nb-card size="small" *ngFor="let service of services; let i = index;" (click)="navigateServiceDetails(service)">
+                <nb-card-body>
+                    <img src="assets/img/{{service.encoded_name}}/{{service.imgBanner}}"/>
+                    <div class="caption" [class.show]="hoveredElement == i" (mouseover)="hoveredElement = i" (mouseout)="hoveredElement = -1">
+                        <div class="text">Veja a galeria</div>
+                    </div>
+                </nb-card-body>
+                <nb-card-footer>{{service.name}}</nb-card-footer>
+            </nb-card>
+        </div>
+    </div>
+</div>

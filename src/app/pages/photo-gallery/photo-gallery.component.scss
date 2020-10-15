@@ -1,0 +1,67 @@
+.photo-gallery {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 12rem;
+
+    .service-title {
+        font-weight: 500;
+        font-size: 1.5rem;
+
+        nb-icon {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+
+    .lightbox-group {
+        columns: 30em;
+        column-gap: 20px;
+
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        // grid-gap: 20px;
+
+        .image-container {
+            // max-width: 50%;
+            // display: flex;
+            position: relative;
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+                border-radius: 4px;
+            }
+
+            .caption {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                z-index: 11;
+                background-color: rgba(0, 0, 0, 0.6);
+                transition: all .8s ease;
+                top: 0;
+                cursor: pointer;
+
+                .text {
+                    font-size: 50px;
+                    color: #fff;
+                    font-weight: 500;
+                    font-family: 'Quattrocento', serif;
+                    position: absolute;
+                    top: 46%;
+                    left: 47%;
+                }
+
+                &.show {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        padding: 40px 15px;
+    }
+}

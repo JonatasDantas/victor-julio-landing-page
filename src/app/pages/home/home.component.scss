@@ -1,0 +1,196 @@
+.home {
+    .carousel-header {
+        .picsum-img-wrapper {
+            background-color: #202020;
+
+            .background {
+                height: 600px;
+                margin-left: -4.5%;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000000;
+                z-index: 1;
+                opacity: 0.2;
+            }
+        }
+
+        .header-caption {
+            max-width: 530px;
+            text-align: center;
+            top: 95px;
+            bottom: auto;
+            left: 40%;
+
+
+            h1 {
+                color: #fff;
+                font-weight: 500;
+                font-size: 40px;
+            }
+
+            h2 {
+                color: #fff;
+                font-weight: 300;
+                font-size: 26px;
+            }
+        }
+
+        .carousel-actions {
+            position: absolute;
+            right: 15%;
+            z-index: 10;
+            max-width: 430px;
+            left: 51%;
+            display: flex;
+            justify-content: space-between;
+            top: 310px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .picsum-img-wrapper {
+                height: 600px;
+
+                .background {
+                    // height: auto;
+                    // margin-top: -30px;
+                    // margin-left: -35%;
+                    // width: 180%;
+                    height: 500px;
+                    position: absolute;
+                    right: -190px;
+                    margin-top: -15px;
+                }
+
+                .overlay {
+                    opacity: 0.3;
+                }
+            }
+
+            .header-caption {
+                width: 100%;
+                left: 0;
+                top: auto;
+                bottom: 105px;
+
+                h1 {
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 26px;
+                    margin-bottom: 1rem;
+                }
+
+                h2 {
+                    font-size: 18px;
+                    line-height: 25px;
+                    text-align: center;
+                    padding: 0 36px;
+                }
+            }
+
+            .carousel-actions {
+                left: 24%;
+                top: auto;
+                bottom: 65px;
+            }
+        }
+    }
+
+    .general-info {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        padding: 4rem 12rem 0;
+
+        .welcoming {
+            font-weight: 500;
+            font-size: 1.5rem;
+        }
+
+        .welcoming-text {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 60px 0px;
+            grid-column-gap: 35px;
+            grid-row-gap: 15px;
+
+            nb-card {
+                box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04) !important;
+
+                nb-card-body {
+                    padding: 0;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: 50% 12%;
+                    }
+
+                    .caption {
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        top: 0;
+                        opacity: 0;
+                        z-index: 11;
+                        background-color: rgba(0, 0, 0, 0.6);
+                        padding: 8.2rem 0;
+                        transition: all .8s ease;
+                        cursor: pointer;
+
+                        .text {
+                            font-size: 20px;
+                            color: #fff;
+                            font-weight: 500;
+                            font-family: 'Quattrocento', serif;
+                        }
+
+                        &.show {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                nb-card-footer {
+                    font-family: 'Abhaya Libre', serif;
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 40px 20px;
+
+            .welcoming {
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 1.5rem;
+            }
+
+            .divider {
+                margin: 1rem 8rem;
+            }
+
+            .welcoming-text {
+                font-size: 1rem;
+            }
+
+            .services {
+                padding: 40px 0px;
+                grid-template-columns: 1fr;
+                grid-row-gap: 0px;
+            }
+        }
+    }
+}

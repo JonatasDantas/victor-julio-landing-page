@@ -1,0 +1,202 @@
+.nav-bar {
+    position: sticky;
+    top: -1px;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+
+    .navigation-bar {
+        width: 100%;
+        height: 100%;
+        padding: 0px 35px;
+    
+        .navigation-overlay {
+            width: 100%;
+            margin: auto;
+    
+            ul {
+                margin: 0;
+                padding: 0 !important;
+            }
+
+            .header-left {
+                .icon-logo {
+                    display: inline-block;
+
+                    img {
+                        cursor: pointer;
+                        height: 4.75rem;
+                        width: 6.8rem;
+                        object-fit: cover;
+                    }
+            
+                    span {
+                        color: #0091d0;
+                    }
+                }
+            }
+    
+            .header-menu {
+                display: flex;
+                justify-content: center;
+
+                .menu-container {
+                    list-style: none;
+                    padding: 0px 2rem;
+        
+                    .menu-item {
+                        cursor: pointer;
+                        list-style: none;
+                        display: inline-block;
+                        padding-top: 7px;
+
+                        .item-info {
+                            padding-top: 1rem;
+                            padding-bottom: 2rem;
+                            padding-left: 1.5rem;
+                            padding-right: 1.5rem;
+                            display: inline-block;
+        
+                            color: #ffff;
+                            font-size: 1rem;
+                            font-weight: 500;
+                            text-decoration: none;
+                            transition: 0.5s;
+                            font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                        }
+        
+                        .item-info:hover {
+                            color: #EFCC82;
+                        }
+        
+                        .item-textfield {
+                            padding-left: 25px;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+            .header-right {
+                .social-media {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-top: 22px;
+
+                    img {
+                        height: 22px;
+                        width: auto;
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .navigation-bar {
+            padding: 0;
+
+            .menu-icon {
+                font-size: 1.8rem;
+                position: relative;
+                margin-left: 8px;
+                top: 8px;
+            }
+
+            img {
+                height: 4.75rem;
+                width: 6.5rem;
+                object-fit: cover !important;
+                position: relative;
+                left: 27%;
+
+            }
+        }
+    }
+}
+
+.mobile-sidebar {
+    .menu {
+        border-bottom: 1px solid #bbbbbb !important;
+    }
+
+    .info {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-row-gap: 5px;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        padding: 0 10px;
+        margin-top: 10px;
+
+        img {
+            height: 180px;
+        }
+
+        .info-text {
+            color: #ffff;
+
+            nb-icon {
+                margin-right: 5px;
+            }
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+            padding: 0 10px;
+
+            img {
+                height: 25px;
+            }
+        }
+    }
+}
+
+.pre-footer.contact-us {
+    background-color: #EFCC82;
+    position: sticky;
+    width: 100%;
+    padding: 50px 80px;
+    display: block;
+    text-align: center;
+
+    .contact-label {
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 20px 10px;
+
+        .contact-label {
+            font-size: 1rem;
+        }
+    }
+}
+
+.footer {
+    .footer-body {
+        color: #FFF;
+        text-align: center;
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 25px;
+                margin-left: 5px;
+                margin-bottom: 6px;
+            }
+        }
+    }
+}
