@@ -1,0 +1,69 @@
+<div class="contact">
+    <img class="background" src="/assets/img/contato-banner.jpg"/>
+    <div class="contact-info">
+        <h1>SOLICITE SEU ORÇAMENTO</h1>
+        <p>Entre em contato comigo e faça um orçamento. Será um prazer atendê-lo(a)! Se preferir, meu whatsapp é (11) 97747-5738.</p>
+    </div>
+
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <div class="contact-form">
+            <nb-alert status="success" *ngIf="success">
+                Contato enviado com sucesso!
+            </nb-alert>
+            <div *ngIf="success && !submitted" class="alert alert-success" role="alert">
+                <div>
+                  <strong>Obrigado pela mensagem! Entraremos em contato</strong>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input nbInput fullWidth type="text" name="name" id="name" placeholder="Nome" status="basic" fieldSize="large" formControlName="name" >
+    
+                <ng-container *ngIf="form.get('name').invalid && form.get('name').touched">
+                    <p class="caption status-danger">
+                        Nome é obrigatório
+                    </p>
+                </ng-container>
+            </div>
+
+            <div class="form-group">
+                <input nbInput fullWidth type="text" name="email" id="email" placeholder="Email" status="basic" fieldSize="large" formControlName="email">
+    
+                <ng-container *ngIf="form.get('email').invalid && form.get('email').touched">
+                    <p class="caption status-danger">
+                        Email é obrigatório
+                    </p>
+                </ng-container>
+            </div>
+
+            <div class="form-group">
+                <input nbInput fullWidth type="text" name="phone" id="phone" placeholder="Telefone" status="basic" fieldSize="large" formControlName="phone">
+    
+                <ng-container *ngIf="form.get('phone').invalid && form.get('phone').touched">
+                    <p class="caption status-danger">
+                        Telefone é obrigatório
+                    </p>
+                </ng-container>
+            </div>
+
+            <div class="form-group">
+                <textarea nbInput fullWidth rows="4" type="text" name="message" id="message" placeholder="Mensagem" status="basic" formControlName="message"></textarea>
+    
+                <ng-container *ngIf="form.get('message').invalid && form.get('message').touched">
+                    <p class="caption status-danger">
+                        Mensagem é obrigatório
+                    </p>
+                </ng-container>
+            </div>
+            
+            <div class="buttons">
+                <button class="contact-button" type="submit" nbButton hero status="success" [disabled]="success">Enviar Contato</button>
+                <a class="whatsapp-button appearance-hero size-medium status-success shape-rectangle nb-transition" target="_blank"
+                    nbButton hero status="success" href="https://api.whatsapp.com/send?phone=5511977475738text=Oi!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento">
+                    <img src="/assets/img/whatsapp.png"/>
+                    Chame no Whatsapp
+                </a>
+            </div>
+        </div>
+    </form>
+</div>

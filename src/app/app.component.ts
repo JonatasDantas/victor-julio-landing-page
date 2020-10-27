@@ -1,15 +1,17 @@
-import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { NbIconLibraries } from '@nebular/theme';
 import { DeviceDetectorService } from 'ngx-device-detector';
+import { slideInAnimation } from './route-animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [ slideInAnimation ]
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('container') sidebarContainer: ElementRef;
 
   title = 'victor-julio-landing-page';
@@ -51,6 +53,18 @@ export class AppComponent implements AfterViewInit {
     private metaTagService: Meta
   ) {
     this.iconLibraries.registerFontPack('fa', { iconClassPrefix: 'fa', packClass: 'fa' });
+  }
+
+  ngOnInit(): void {
+    this.metaTagService.addTags([
+      { name: 'keywords', content: 'Victor Julio, Victor Julio Fotografia, Fotografia, Victor, Julio, Victor Julio Fotógrafo' },
+      { name: 'description', content: 'Procurando por um fotógrafo carismático, divertido, apaixonado e criativo ? Sou eu mesmo!' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'author', content: 'Victor Julio' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'date', content: '2020-10-27', scheme: 'YYYY-MM-DD' },
+      { charset: 'UTF-8' }
+    ]);
   }
 
   @HostListener('window:resize', ['$event'])

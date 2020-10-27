@@ -11,12 +11,16 @@
 
         <div style="margin-top: 20px;">
           <nb-icon icon="phone-outline" status="warning"></nb-icon>
-          11 3991-4482
+          11 97747-5738
         </div>
 
         <div class="social-media">
-          <img src="/assets/img/facebook-icon.png">
-          <img src="/assets/img/Instagram-Icon.png">
+          <a href="https://www.instagram.com/viictorjulio" target="_blank">
+            <img src="/assets/img/Instagram-Icon.png">
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=5511977475738text=Oi!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento" target="_blank">
+            <img src="/assets/img/whatsapp.png" style="height: 30px; margin-top: -3px;">
+          </a>
         </div>
       </div>
     </div>
@@ -44,8 +48,12 @@
 
             <div class="col-md-3 header-right">
               <div class="social-media">
-                <img src="/assets/img/facebook-icon.png">
-                <img src="/assets/img/Instagram-Icon.png">
+                <a href="https://www.instagram.com/viictorjulio" target="_blank">
+                  <img src="/assets/img/Instagram-Icon.png">
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5511977475738text=Oi!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento" target="_blank">
+                  <img src="/assets/img/whatsapp.png" style="height: 32px; margin-top: -5px; margin-left: 8px;">
+                </a>
               </div>
             </div>
           </div>
@@ -57,7 +65,9 @@
         </div>
       </nb-layout-header>
       <nb-layout-column class="p-0">
-        <router-outlet #o="outlet"></router-outlet>
+        <div [@routeAnimations]="o && o.activatedRouteData && o.activatedRouteData['animation']">
+          <router-outlet #o="outlet"></router-outlet>
+        </div>
 
         <div class="pre-footer contact-us">
           <div class="contact-label">Quer ser fotografado(a) ou tem alguma dúvida ?</div>
@@ -68,8 +78,12 @@
       <nb-layout-footer class="footer">
         <div class="footer-body">
           <div class="social-media">
-            <img src="/assets/img/facebook-icon.png">
-            <img src="/assets/img/Instagram-Icon.png">
+            <a href="https://www.instagram.com/viictorjulio" target="_blank">
+              <img src="/assets/img/Instagram-Icon.png">
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5511977475738text=Oi!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento" target="_blank">
+              <img src="/assets/img/whatsapp.png" style="height: 30px; margin-top: -3px;">
+            </a>
           </div>
           <span>Copyright © Victor Julio Fotografia - Todos os direitos reservados.</span>
         </div>

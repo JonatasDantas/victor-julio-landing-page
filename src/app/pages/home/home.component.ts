@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { ServicesData } from 'src/app/@core/data/services-data';
 
@@ -14,9 +15,14 @@ export class HomeComponent implements OnInit {
 
   hoveredElement: any;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private metaTagService: Meta) { }
 
   ngOnInit(): void {
+    this.metaTagService.updateTag(
+      { name: 'description', content: 'Procurando por um fotógrafo carismático, divertido, apaixonado e criativo ? Sou eu mesmo!' }
+    );
   }
 
   navigatePortfolio() {

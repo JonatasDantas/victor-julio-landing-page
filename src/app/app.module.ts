@@ -13,6 +13,7 @@ import { DeviceDetectorModule } from 'ngx-device-detector';
 import { AboutMeModule } from './pages/about-me/about-me.module';
 import { PortfolioModule } from './pages/portfolio/portfolio.module';
 import { PhotoGalleryModule } from './pages/photo-gallery/photo-gallery.module';
+import { ContactModule } from './pages/contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { PhotoGalleryModule } from './pages/photo-gallery/photo-gallery.module';
     AboutMeModule,
     PortfolioModule,
     PhotoGalleryModule,
+    ContactModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
