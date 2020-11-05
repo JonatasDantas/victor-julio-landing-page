@@ -14,6 +14,7 @@ import { AboutMeModule } from './pages/about-me/about-me.module';
 import { PortfolioModule } from './pages/portfolio/portfolio.module';
 import { PhotoGalleryModule } from './pages/photo-gallery/photo-gallery.module';
 import { ContactModule } from './pages/contact/contact.module';
+import { HireMeModule } from './pages/hire-me/hire-me.module';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ContactModule } from './pages/contact/contact.module';
     PortfolioModule,
     PhotoGalleryModule,
     ContactModule,
+    HireMeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -35,12 +35,12 @@ export class AppComponent implements OnInit, AfterViewInit {
       icon: {icon: 'images', pack: 'fa'}
     },
     {
-      title: 'Dúvidas',
-      link: 'duvidas',
+      title: 'Quero te contratar',
+      link: 'quero-te-contratar',
       icon: {icon: 'camera-retro', pack: 'fa'}
     },
     {
-      title: 'Contato',
+      title: 'Dúvidas / Contato',
       link: 'contato',
       icon: {icon: 'comments', pack: 'fa'}
     },

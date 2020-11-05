@@ -11,16 +11,10 @@ export const ServicesData = [
             'feminino-5.jpeg',
             'feminino-6.jpeg',
             'feminino-7.jpeg',
-            'feminino-8.jpeg',
         ],
     },
     {
-        name: 'Ensaio Masculino',
-        encoded_name: 'ensaio-masculino',
-        imgBanner: 'ensaio-masculino-banner.jpg'
-    },
-    {
-        name: 'Festas de 15 anos',
+        name: 'Debutantes',
         encoded_name: 'festa-15-anos',
         imgBanner: '15anos-1.jpeg',
         images: [
@@ -56,6 +50,11 @@ export const ServicesData = [
         ],
     },
     {
+        name: 'Casamento civil',
+        encoded_name: 'casamentos',
+        imgBanner: 'casamentos-banner.jpg'
+    },
+    {
         name: 'Ensaio Infantil',
         encoded_name: 'ensaio-infantil',
         imgBanner: 'infantil-2.jpeg',
@@ -79,8 +78,19 @@ export const ServicesData = [
         ]
     },
     {
-        name: 'Casamentos',
-        encoded_name: 'casamentos',
-        imgBanner: 'casamentos-banner.jpg'
+        name: 'Smash the cake',
+        encoded_name: 'smash-the-cake',
+        imgBanner: 'smash-1.jpeg',
+        images: [
+            'smash-1.jpeg',
+            'smash-2.jpeg',
+            'smash-3.jpeg',
+        ]
+    },
+    {
+        name: 'Eventos',
+        encoded_name: 'eventos',
+        imgBanner: 'banner.jpg',
+        images: []
     },
 ];
