@@ -58,7 +58,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.metaTagService.addTags([
       { name: 'keywords', content: 'Victor Julio, Victor Julio Fotografia, Fotografia, Victor, Julio, Victor Julio Fotógrafo' },
-      { name: 'description', content: 'Procurando por um fotógrafo carismático, divertido, apaixonado e criativo ? Sou eu mesmo!' },
+      { name: 'description', content: 'Procurando por um fotógrafo carismático, divertido, apaixonado e criativo ? Sou eu mesmo! Sou especializado em ensaios pessoais, festas de 15 anos, aniversário infantil e ensaio famliar' },
       { name: 'robots', content: 'index, follow' },
       { name: 'author', content: 'Victor Julio' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
