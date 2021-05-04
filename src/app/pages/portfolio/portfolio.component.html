@@ -7,7 +7,7 @@
             <div class="carousel-cell" *ngFor="let service of services; let i = index;">
                 <nb-card size="small" (click)="navigateServiceDetails(service)">
                     <nb-card-body>
-                        <img src="assets/img/{{service.encoded_name}}/{{service.imgBanner}}"/>
+                        <img src="assets/img/{{service.encoded_name}}/{{service.imgBanner}}" [ngStyle]="{'object-position': service.customObjectPosition}"/>
                         <div class="caption" [class.show]="hoveredElement == i" (mouseover)="hoveredElement = i" (mouseout)="hoveredElement = -1">
                             <div class="text">Veja a galeria</div>
                         </div>

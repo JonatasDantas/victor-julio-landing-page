@@ -21,6 +21,9 @@
           <a href="https://api.whatsapp.com/send?phone=5511977475738text=Oi!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento" target="_blank">
             <img src="/assets/img/whatsapp.png" style="height: 30px; margin-top: -3px;">
           </a>
+          <a href="https://abnb.me/e/ToreN4ahmbb" target="_blank">
+            <img src="/assets/img/airbnb.png">
+          </a>
         </div>
       </div>
     </div>
@@ -32,13 +35,13 @@
       <nb-layout-header subheader class="nav-bar">
         <div class="navigation-bar" *ngIf="!this.isMobile">
           <div class="navigation-overlay row d-flex">
-            <div class="col-md-3 p-0 header-left">
+            <div class="col-md-2 p-0 header-left">
               <div class="icon-logo">
                 <img src="/assets/img/company-logo-black.png" (click)="navigateHome()" />
               </div>
             </div>
 
-            <div class="col-md-6 header-menu">
+            <div class="col-md-7 header-menu">
               <ul class="menu-container">
                 <li class="menu-item" *ngFor="let link of links">
                   <a class="item-info" (click)="navigatePage(link)">{{link.title}}</a>
@@ -53,6 +56,9 @@
                 </a>
                 <a href="https://api.whatsapp.com/send?phone=5511977475738text=Oi!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento" target="_blank">
                   <img src="/assets/img/whatsapp.png" style="height: 32px; margin-top: -5px; margin-left: 8px;">
+                </a>
+                <a href="https://abnb.me/e/ToreN4ahmbb" target="_blank">
+                  <img src="/assets/img/airbnb.png" style="margin-left: 4px;">
                 </a>
               </div>
             </div>
@@ -77,13 +83,26 @@
 
       <nb-layout-footer class="footer">
         <div class="footer-body">
-          <div class="social-media">
-            <a href="https://www.instagram.com/viictorjulio" target="_blank">
-              <img src="/assets/img/Instagram-Icon.png">
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=5511977475738text=Oi!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento" target="_blank">
-              <img src="/assets/img/whatsapp.png" style="height: 30px; margin-top: -3px;">
-            </a>
+          <div class="footer-column row justify-content-center">
+            <div class="menu">
+              <ul>
+                <li *ngFor="let link of links">
+                  <a class="item-info" (click)="navigatePage(link)">{{link.title}}</a>
+                </li>
+              </ul>
+  
+            </div>
+            <div class="social-media">
+              <a href="https://www.instagram.com/viictorjulio" target="_blank">
+                <img src="/assets/img/Instagram-Icon.png">
+              </a>
+              <a href="https://api.whatsapp.com/send?phone=5511977475738text=Oi!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento" target="_blank">
+                <img src="/assets/img/whatsapp.png" style="height: 30px; margin-top: -3px;">
+              </a>
+              <a href="https://abnb.me/e/ToreN4ahmbb" target="_blank">
+                <img src="/assets/img/airbnb.png">
+              </a>
+            </div>
           </div>
           <span>Copyright © Victor Julio Fotografia - Todos os direitos reservados.</span>
         </div>

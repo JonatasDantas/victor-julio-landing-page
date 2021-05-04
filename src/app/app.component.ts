@@ -57,12 +57,19 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.metaTagService.addTags([
+      { name: 'viewport', content: '"width=device-width, initial-scale=1' },
       { name: 'keywords', content: 'Victor Julio, Victor Julio Fotografia, Fotografia, Victor, Julio, Victor Julio Fotógrafo' },
-      { name: 'description', content: 'Procurando por um fotógrafo carismático, divertido, apaixonado e criativo ? Sou eu mesmo! Sou especializado em ensaios pessoais, festas de 15 anos, aniversário infantil e ensaio famliar' },
       { name: 'robots', content: 'index, follow' },
       { name: 'author', content: 'Victor Julio' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'date', content: '2020-10-27', scheme: 'YYYY-MM-DD' },
+      { name: 'description', content: 'Venha conhecer o meu trabalho e faça seu orçamento' },
+      { name: 'google-site-verification', content: 'google-site-verification=tC8qyg19B-GfdpdZwSgokeEJgapbyNoLLPs2V02nMMo' },
+
+      { name: 'og:title', content: 'Victor Julio Fotografia' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'https://victorjulio.com.br/' },
+      { name: 'og:image', content: 'https://victorjulio.com.br/assets/img/meta-preview.PNG' },
+      { name: 'og:description', content: 'Venha conhecer o meu trabalho e faça seu orçamento' },
       { charset: 'UTF-8' }
     ]);
   }

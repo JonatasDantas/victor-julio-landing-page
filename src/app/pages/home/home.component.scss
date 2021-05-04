@@ -1,11 +1,17 @@
 .home {
     .carousel-header {
         .picsum-img-wrapper {
+            display: flex;
+            justify-content: space-between;
             background-color: #202020;
 
             .background {
                 height: 600px;
-                margin-left: -4.5%;
+                margin-left: 4%;
+
+                &.second {
+                    margin-left: 26%;
+                }
             }
 
             .overlay {
@@ -24,7 +30,7 @@
             text-align: center;
             top: 95px;
             bottom: auto;
-            left: 40%;
+            left: 34%;
 
 
             h1 {
@@ -45,7 +51,7 @@
             right: 15%;
             z-index: 10;
             max-width: 430px;
-            left: 51%;
+            left: 45%;
             display: flex;
             justify-content: space-between;
             top: 310px;
@@ -53,17 +59,24 @@
 
         @media screen and (max-width: 768px) {
             .picsum-img-wrapper {
-                height: 600px;
+                height: 520px;
+                padding: 0;
+                display: block;
 
                 .background {
                     // height: auto;
                     // margin-top: -30px;
                     // margin-left: -35%;
                     // width: 180%;
-                    height: 500px;
+                    height: 520px;
                     position: absolute;
-                    right: -190px;
-                    margin-top: -15px;
+                    right: 0;
+                    margin-left: 0;
+                    width: 100%;
+
+                    &.first {
+                        display: none;
+                    }
                 }
             }
 
@@ -89,7 +102,7 @@
             }
 
             .carousel-actions {
-                left: 24%;
+                left: 20%;
                 top: auto;
                 bottom: 65px;
             }

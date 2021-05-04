@@ -12,8 +12,9 @@ export class HomeComponent implements OnInit {
   @ViewChild('container') sidebarContainer: ElementRef;
 
   services = ServicesData;
-
   hoveredElement: any;
+
+  landingImages = [];
 
   constructor(
     private router: Router,
@@ -21,8 +22,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaTagService.updateTag(
-      { name: 'description', content: 'Procurando por um fotógrafo carismático, divertido, apaixonado e criativo ? Sou eu mesmo!' }
+      { name: 'description', content: 'Venha conhecer o meu trabalho e faça seu orçamento' }
     );
+    
+    const quantityLanding = 5;
+    for (let index = 1; index <= quantityLanding; index++) {
+      this.landingImages.push(`/assets/img/landing/landing (${index}).jpeg`);
+    }
   }
 
   navigatePortfolio() {
