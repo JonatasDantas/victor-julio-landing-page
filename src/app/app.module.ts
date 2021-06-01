@@ -38,7 +38,7 @@ import { HireMeModule } from './pages/hire-me/hire-me.module';
     PortfolioModule,
     PhotoGalleryModule,
     ContactModule,
-    HireMeModule
+    HireMeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

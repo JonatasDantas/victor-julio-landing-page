@@ -10,6 +10,7 @@ import { ServicesData } from 'src/app/@core/data/services-data';
 })
 export class PhotoGalleryComponent implements OnInit {
   public service: any;
+  public images: any[] = [];
   hoveredElement: any;
 
   constructor(private route: ActivatedRoute, private location: Location) { }
@@ -17,6 +18,14 @@ export class PhotoGalleryComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.service = ServicesData.find((item) => item.encoded_name === params.encoded_name);
+
+      if (this.service.imageQuantity) {
+        for (let index = 1; index <= this.service.imageQuantity; index++) {
+          this.images.push(`image (${index}).jpg`);
+        }
+      } else {
+        this.images = this.service.images;
+      }
     });
   }
 

@@ -6,7 +6,7 @@
     <hr class="divider warning"/>
 
     <div lightbox-group>
-        <div class="image-container" *ngFor="let image of service.images; let i = index;">
+        <div class="image-container" *ngFor="let image of images; let i = index;">
             <img class="image-{{i}}" src="assets/img/{{service.encoded_name}}/{{image}}" lightbox [counter]="true" [closeButtonText]="'Fechar'"/>
             <div class="caption" [class.show]="hoveredElement == i" (mouseover)="hoveredElement = i" (mouseout)="hoveredElement = -1" (click)="selectImage(i)">
                 <div class="text">+</div>

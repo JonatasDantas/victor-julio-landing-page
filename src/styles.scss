@@ -41,3 +41,5 @@ body {
 .lightbox-shown {
   z-index: 10001 !important;
 }
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
